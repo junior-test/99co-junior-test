@@ -22,7 +22,7 @@ function mapDispatchToProps(dispatch) {
 class ListingCarousel extends Component {
   static propTypes = {
     listings: PropTypes.object,
-    firstRender: PropTypes.boolean,
+    firstRender: PropTypes.bool,
   };
 
   constructor(props) {
