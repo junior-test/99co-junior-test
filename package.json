@@ -6,19 +6,23 @@
     "prop-types": "^15.6.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "react-icons": "^3.10.0",
     "react-redux": "7.2.0",
     "redux": "4.0.5",
     "redux-thunk": "2.3.0",
+    "styled-components": "^5.1.0",
     "superagent": "5.2.2"
   },
   "devDependencies": {
+    "gh-pages": "^2.2.0",
     "react-scripts": "3.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build"
   },
   "engines": {
     "node": "10.16.3"
@@ -33,6 +37,7 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
-    ]
+    ],
+    "homepage": "https://jemine1998.github.io/99co-junior-test"
   }
 }
