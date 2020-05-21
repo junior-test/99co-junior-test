@@ -45,6 +45,10 @@ class ListingItem extends PureComponent {
   constructor() {
     super();
     this.onClick = this.onClick.bind(this);
+    this.state = {
+      keyCount: 0,
+    }
+
   }
 
   onClick() {
@@ -53,7 +57,7 @@ class ListingItem extends PureComponent {
 
   render() {
     const { 
-      isTest,
+      id,
       photos,
       address_name,
       address_line_2,
@@ -62,13 +66,13 @@ class ListingItem extends PureComponent {
       sub_category_formatted
     } = this.props.listing;
 
-    console.log(this.props.listing)
     const labelForListingType = sub_category_formatted + ' for ' + listing_type
     const labelForBedBath = attributes.bedrooms_formatted + ' ' + attributes.bathrooms_formatted 
+  
     return (
       <S_Listingitem>
         <div className={ `listing`}>
-            <ImageGallery images={photos}/>
+            <ImageGallery images={photos} listingId={id}/>
             <div className={`listing-details`}>
               <h3 className={`address-name`}>{address_name}</h3>
               <div className={`listing-details-row`}>

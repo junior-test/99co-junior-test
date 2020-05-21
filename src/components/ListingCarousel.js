@@ -143,18 +143,16 @@ class ListingCarousel extends Component {
     const lastListing = this.state.currentPage * 3;
     const firstListing = lastListing - 3;
     const displayedListing = listings.slice(firstListing, lastListing);
+    const numPages = Math.ceil(listings.length/3);
 
     const items = displayedListing.map((listing, index) => {
       return (
         <ListingItem
-          key={index}
           listing={listing}
           onClick={this.updateListing}
         />
       );
     });
-
-    console.log(this.state.currentPage)
 
     return (
       <S_ListingCarousel>
@@ -167,7 +165,7 @@ class ListingCarousel extends Component {
             {items}
           </div>
           <div className={`btn-container`}>
-            <button type='button' className={this.state.currentPage < listings.length ? `btn-circle btn-right` : `close`} onClick={this.handleRightClick}><MdNavigateNext style={{verticalAlign: "middle"}} size={34}/></button>
+            <button type='button' className={this.state.currentPage < numPages ? `btn-circle btn-right` : `close`} onClick={this.handleRightClick}><MdNavigateNext style={{verticalAlign: "middle"}} size={34}/></button>
           </div>
            </div>
         </S_ListingCarousel>

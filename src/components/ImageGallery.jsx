@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState , useEffect } from 'react'
 import styled from 'styled-components'
 
 const S_ImageGallery = styled.div`
@@ -71,13 +71,18 @@ const S_ImageGallery = styled.div`
     
 `
 
-const ImageGallery = ({images}) => {
+const ImageGallery = ({listingId, images}) => { 
     const [index, setIndex] = useState(0)
     const countLabel = index+1 + '/' + images.length
+
+    useEffect(() => {
+        setIndex(0)
+    }, [listingId])
+
     return (
         <S_ImageGallery>
             <div class={`container`}>
-                <img key={index} src={images[index].url} className={`background-image`}/>
+                <img src={images[index].url} className={`background-image`}/>
                 <div className={index>0 ? `left-button` : `close`} onClick={()=>setIndex(index-1)}> {`〈  `} </div>
                 <div className={index < (images.length-1) ? `right-button` : `close`} onClick={()=>setIndex(index+1)}>{`  〉`}</div>
                 <div className={`image-count`}>{countLabel}</div>
