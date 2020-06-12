@@ -1,23 +1,44 @@
 {
+  "homepage": "https://jemine1998.github.io/99co-junior-test",
   "name": "99carousel",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
     "prop-types": "^15.6.2",
-    "react": "15.5.4",
-    "react-dom": "15.5.4",
-    "react-redux": "5.0.5",
-    "redux": "3.6.0",
-    "redux-thunk": "2.2.0",
-    "superagent": "3.5.2"
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-icons": "^3.10.0",
+    "react-redux": "7.2.0",
+    "redux": "4.0.5",
+    "redux-thunk": "2.3.0",
+    "styled-components": "^5.1.0",
+    "superagent": "5.2.2"
   },
   "devDependencies": {
-    "react-scripts": "1.0.7"
+    "gh-pages": "^2.2.0",
+    "react-scripts": "3.4.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build"
+  },
+  "engines": {
+    "node": "10.16.3"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
