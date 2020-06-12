@@ -1,15 +1,16 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app) and modified to provide a nice little challenge for 99.co frontend candidates.
 
 # Goal
-- Create a carousel component that matches the [design](https://www.evernote.com/l/ACM_G1Fy_etKDou0EX62QeCRb7M6rBHMD9k)
+- Create a carousel component that matches the [design](https://github.com/junior-test/99co-junior-test/blob/master/design_reference.png)
 - Able to browse photos on listing card
 - Able to fetch additional listings once reach the end of the carousel (Additional listing data can be fetched through the same listing API)
 - Bonus points for:
   - Hosting the project on a remote server/service so we can visit later
   - Performance optimization/Architectural suggestion to the project that you deem worthy
+  - Clear and reviewable work process
 
 # Delivery
-Once finish, please push to a separate repo and drop us an email. We'll get back to you asap.
+Once finished, please push to a separate repo and drop us an email. We'll get back to you asap.
 
 # Restriction
 - Do not use any extra library other than those provided in the repo
